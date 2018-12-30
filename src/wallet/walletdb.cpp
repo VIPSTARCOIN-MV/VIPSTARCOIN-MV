@@ -866,7 +866,6 @@ bool CWalletDB::EraseDestData(const std::string &address, const std::string &key
     return EraseIC(std::make_pair(std::string("destdata"), std::make_pair(address, key)));
 }
 
-
 bool CWalletDB::WriteHDChain(const CHDChain& chain)
 {
     return WriteIC(std::string("hdchain"), chain);

@@ -72,6 +72,7 @@ std::map<int, ScriptsElement> scriptsMap;
  * Override with -mintxfee
  */
 CFeeRate CWallet::minTxFee = CFeeRate(DEFAULT_TRANSACTION_MINFEE);
+
 /**
  * If fee estimation does not have enough data to provide estimates, use this fee instead.
  * Has no effect if not using fee estimation
@@ -1512,8 +1513,6 @@ void CWallet::BlockDisconnected(const std::shared_ptr<const CBlock>& pblock) {
     }
 }
 
-
-
 void CWallet::BlockUntilSyncedToCurrentChain() {
     AssertLockNotHeld(cs_main);
     AssertLockNotHeld(cs_wallet);
@@ -1537,7 +1536,6 @@ void CWallet::BlockUntilSyncedToCurrentChain() {
     // at least with the time we entered this function).
     SyncWithValidationInterfaceQueue();
 }
-
 
 isminetype CWallet::IsMine(const CTxIn &txin) const
 {
@@ -3234,6 +3232,7 @@ bool CWallet::CreateTransaction(const std::vector<CRecipient>& vecSend, CWalletT
                         change_prototype_txout = CTxOut(0, scriptChange);
                         change_prototype_size = GetSerializeSize(change_prototype_txout, SER_DISK, 0);
                     }
+
                     // Fill a vout to ourself
                     CTxOut newTxOut(nChange, scriptChange);
 
@@ -3626,12 +3625,12 @@ bool CWallet::CreateCoinStake(const CKeyStore& keystore, unsigned int nBits, con
     const Consensus::Params& consensusParams = Params().GetConsensus();
     // Calculate reward
     {
-        int64_t nReward = nTotalFees + GetBlockSubsidy(pindexPrev->nHeight + 1, consensusParams);
+        int64_t nReward = nTotalFees + GetProofOfStakeReward(pindexPrev->nHeight, consensusParams);
         if (nReward < 0)
             return false;
 
         nCredit += nReward;
-   }
+    }
 
     if (nCredit >= GetStakeSplitThreshold())
     {
@@ -4761,6 +4760,11 @@ void CWallet::postInitProcess(CScheduler& scheduler)
 bool CWallet::BackupWallet(const std::string& strDest)
 {
     return dbw->Backup(strDest);
+}
+
+std::string CWallet::GetWalletFileName()
+{
+    return gArgs.GetArg("-wallet", DEFAULT_WALLET_DAT);
 }
 
 bool CWallet::LoadToken(const CTokenInfo &token)

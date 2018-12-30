@@ -58,6 +58,7 @@ double GetDifficulty(const CChain& chain, const CBlockIndex* blockindex)
     }
 
     int nShift = (blockindex->nBits >> 24) & 0xff;
+
     double dDiff =
         (double)0x0000ffff / (double)(blockindex->nBits & 0x00ffffff);
 
@@ -1908,8 +1909,8 @@ UniValue gettxout(const JSONRPCRequest& request)
             "     \"hex\" : \"hex\",        (string) \n"
             "     \"reqSigs\" : n,          (numeric) Number of required signatures\n"
             "     \"type\" : \"pubkeyhash\", (string) The type, eg pubkeyhash\n"
-            "     \"addresses\" : [          (array of string) array of htmlcoin addresses\n"
-            "        \"address\"     (string) htmlcoin address\n"
+            "     \"addresses\" : [          (array of string) array of vipstarcoin addresses\n"
+            "        \"address\"     (string) vipstarcoin address\n"
             "        ,...\n"
             "     ]\n"
             "  },\n"
@@ -2485,7 +2486,7 @@ UniValue getchaintxstats(const JSONRPCRequest& request)
             pindex = chainActive.Tip();
         }
     }
-    
+
     assert(pindex != nullptr);
 
     if (request.params[0].isNull()) {
@@ -2562,6 +2563,7 @@ static const CRPCCommand commands[] =
     { "blockchain",         "verifychain",            &verifychain,            {"checklevel","nblocks"} },
     { "blockchain",         "getaccountinfo",         &getaccountinfo,         {"contract_address"} },
     { "blockchain",         "getstorage",             &getstorage,             {"address, index, blockNum"} },
+
     { "blockchain",         "preciousblock",          &preciousblock,          {"blockhash"} },
 
     { "blockchain",         "callcontract",           &callcontract,           {"address","data"} },

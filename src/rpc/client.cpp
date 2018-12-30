@@ -37,7 +37,6 @@ static const CRPCConvertParam vRPCConvertParams[] =
     { "sendtoaddress", 4, "subtractfeefromamount" },
     { "sendtoaddress", 5 , "replaceable" },
     { "sendtoaddress", 6 , "conf_target" },
-    { "sendtoaddress", 9, "changeToSender" },
     { "settxfee", 0, "amount" },
     { "getsubsidy", 0, "height" },
     { "getreceivedbyaddress", 1, "minconf" },

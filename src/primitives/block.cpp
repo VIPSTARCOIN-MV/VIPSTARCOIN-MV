@@ -15,6 +15,11 @@ uint256 CBlockHeader::GetHash() const
     return SerializeHash(*this);
 }
 
+unit256 CBlockHeader::GetPoWHash() const
+{
+	return GetHash();
+}
+
 uint256 CBlockHeader::GetHashWithoutSign() const
 {
     return SerializeHash(*this, SER_GETHASH | SER_WITHOUT_SIGNATURE);

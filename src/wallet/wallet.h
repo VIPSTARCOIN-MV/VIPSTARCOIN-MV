@@ -127,7 +127,6 @@ enum OutputType : int
 extern OutputType g_address_type;
 extern OutputType g_change_type;
 
-
 /** A key pool entry */
 class CKeyPool
 {
@@ -695,7 +694,6 @@ private:
     std::mutex mutexScanning;
     friend class WalletRescanReserver;
 
-
     /**
      * Select a set of coins such that nValueRet >= nTargetValue and at least
      * all coins from coinControl are selected; Never select unconfirmed coins
@@ -1120,7 +1118,7 @@ public:
     int GetVersion() { LOCK(cs_wallet); return nWalletVersion; }
   
     //! disable transaction for coinstake
-    void DisableTransaction(const CTransaction &tx);   
+    void DisableTransaction(const CTransaction &tx);
 
     //! Get wallet transactions that conflict with given transaction (spend same outputs)
     std::set<uint256> GetConflicts(const uint256& txid) const;
@@ -1237,6 +1235,8 @@ public:
      * This function will automatically add the necessary scripts to the wallet.
      */
     CTxDestination AddAndGetDestinationForScript(const CScript& script, OutputType);
+
+    static std::string GetWalletFileName();
 
     /* Add token entry into the wallet */
     bool AddTokenEntry(const CTokenInfo& token, bool fFlushOnClose=true);
