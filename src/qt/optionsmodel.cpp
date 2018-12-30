@@ -27,6 +27,7 @@
 #include <QSettings>
 #include <QStringList>
 #include <utilmoneystr.h>
+
 const char *DEFAULT_GUI_PROXY_HOST = "127.0.0.1";
 
 OptionsModel::OptionsModel(QObject *parent, bool resetSettings) :

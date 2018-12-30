@@ -348,7 +348,6 @@ void SendCoinsDialog::on_sendButton_clicked()
     }
     questionString.append("</span>");
 
-
     SendConfirmationDialog confirmationDialog(tr("Confirm send coins"),
         questionString.arg(formatted.join("<br />")), SEND_CONFIRM_DELAY, this);
     confirmationDialog.exec();
@@ -770,7 +769,7 @@ void SendCoinsDialog::coinControlChangeEdited(const QString& text)
         }
         else if (!IsValidDestination(dest)) // Invalid address
         {
-            ui->labelCoinControlChangeLabel->setText(tr("Warning: Invalid HTMLCOIN address"));
+            ui->labelCoinControlChangeLabel->setText(tr("Warning: Invalid VIPSTARCOIN address"));
         }
         else // Valid address
         {

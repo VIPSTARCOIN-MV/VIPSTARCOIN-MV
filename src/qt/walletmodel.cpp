@@ -174,6 +174,7 @@ void WalletModel::pollBalanceChanged()
         }
     }
 }
+
 void WalletModel::updateContractBook(const QString &address, const QString &label, const QString &abi, int status)
 {
     if(contractTableModel)

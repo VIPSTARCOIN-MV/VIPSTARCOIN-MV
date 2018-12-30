@@ -1,13 +1,13 @@
-<TS language="es_419" version="2.1">
+<TS language="en_US" version="2.1">
 <context>
     <name>AddressBookPage</name>
     <message>
         <source>Right-click to edit address or label</source>
-        <translation>Haga clic para editar la dirección o etiqueta</translation>
+        <translation>Right-click to edit address or label</translation>
     </message>
     <message>
         <source>Create a new address</source>
-        <translation>Crear una nueva dirección</translation>
+        <translation>Create a new address</translation>
     </message>
     <message>
         <source>&amp;New</source>
@@ -15,35 +15,31 @@
     </message>
     <message>
         <source>Copy the currently selected address to the system clipboard</source>
-        <translation>Copia la dirección seleccionada al portapapeles del sistema</translation>
+        <translation>Copy the currently selected address to the system clipboard</translation>
+    </message>
+    <message>
+        <source>&amp;Copy</source>
+        <translation>&amp;Copy</translation>
+    </message>
+    <message>
+        <source>C&amp;lose</source>
+        <translation>C&amp;lose</translation>
     </message>
     <message>
         <source>Delete the currently selected address from the list</source>
-        <translation>Borrar la dirección que esta seleccionada en la lista</translation>
+        <translation>Delete the currently selected address from the list</translation>
     </message>
     <message>
         <source>Export the data in the current tab to a file</source>
-        <translation>Exportar los datos de la actual tabla hacia un archivo</translation>
+        <translation>Export the data in the current tab to a file</translation>
     </message>
     <message>
-        <source>Choose the address to send coins to</source>
-        <translation>Seleccione la dirección a la que enviará las monedas</translation>
+        <source>&amp;Export</source>
+        <translation>&amp;Export</translation>
     </message>
     <message>
-        <source>Choose the address to receive coins with</source>
-        <translation>Seleccione la dirección con la que recibirá las monedas</translation>
-    </message>
-    <message>
-        <source>Sending addresses</source>
-        <translation>Enviando direcciones</translation>
-    </message>
-    <message>
-        <source>Receiving addresses</source>
-        <translation>Recibiendo direcciones</translation>
-    </message>
-    <message>
-        <source>These are your HTMLCOIN addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Estas son sus direcciones de HTMLCOIN para enviar sus pagos. Siempre revise el monto y la dirección recibida antes de enviar monedas.</translation>
+        <source>&amp;Delete</source>
+        <translation>&amp;Delete</translation>
     </message>
     </context>
 <context>
@@ -51,6 +47,22 @@
     </context>
 <context>
     <name>AskPassphraseDialog</name>
+    <message>
+        <source>Passphrase Dialog</source>
+        <translation>Passphrase Dialog</translation>
+    </message>
+    <message>
+        <source>Enter passphrase</source>
+        <translation>Enter passphrase</translation>
+    </message>
+    <message>
+        <source>New passphrase</source>
+        <translation>New passphrase</translation>
+    </message>
+    <message>
+        <source>Repeat new passphrase</source>
+        <translation>Repeat new passphrase</translation>
+    </message>
     </context>
 <context>
     <name>BanTableModel</name>
@@ -156,10 +168,6 @@
     </context>
 <context>
     <name>WalletView</name>
-    <message>
-        <source>Export the data in the current tab to a file</source>
-        <translation>Exportar los datos de la actual tabla hacia un archivo</translation>
-    </message>
     </context>
 <context>
     <name>qtum-core</name>

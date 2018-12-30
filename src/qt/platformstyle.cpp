@@ -45,6 +45,7 @@ void MakeSingleColorImage(QImage& img, const QColor& colorbase, double opacity =
         }
     }
 }
+
 QPixmap MakeSingleColorPixmap(QImage& img, const QColor& colorbase, double opacity = 1)
 {
     MakeSingleColorImage(img, colorbase, opacity);

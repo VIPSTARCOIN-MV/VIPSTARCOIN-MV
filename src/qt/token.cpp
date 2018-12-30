@@ -6,7 +6,7 @@
 #include <base58.h>
 #include <utilstrencodings.h>
 #include <qt/eventlog.h>
-#include <libethcore/ABI.h>
+#include <cpp-ethereum/libethcore/ABI.h>
 
 namespace Token_NS
 {

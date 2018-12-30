@@ -54,6 +54,7 @@ public:
                       const QModelIndex &index ) const
     {
         painter->save();
+
         QDateTime date = index.data(TransactionTableModel::DateRole).toDateTime();
         QIcon icon = qvariant_cast<QIcon>(index.data(TransactionTableModel::RawDecorationRole));
         QString address = index.data(Qt::DisplayRole).toString();
@@ -208,6 +209,7 @@ public:
 
     const PlatformStyle *platformStyle;
 };
+
 #include <qt/overviewpage.moc>
 
 OverviewPage::OverviewPage(const PlatformStyle *platformStyle, QWidget *parent) :
@@ -270,6 +272,7 @@ OverviewPage::OverviewPage(const PlatformStyle *platformStyle, QWidget *parent) 
     // Token list
     ui->listTokens->setItemDelegate(tkndelegate);
     ui->listTokens->setAttribute(Qt::WA_MacShowFocusRect, false);
+
     // start with displaying the "out of sync" warnings
     showOutOfSyncWarning(true);
     connect(ui->labelWalletStatus, SIGNAL(clicked()), this, SLOT(handleOutOfSyncWarningClicks()));
@@ -425,6 +428,7 @@ void OverviewPage::updateDisplayUnit()
         if(currentBalance != -1)
             setBalance(currentBalance, currentUnconfirmedBalance, currentImmatureBalance, currentStake,
                        currentWatchOnlyBalance, currentWatchUnconfBalance, currentWatchImmatureBalance, currentWatchOnlyStake);
+
         // Update txdelegate->unit with the current unit
         txdelegate->unit = walletModel->getOptionsModel()->getDisplayUnit();
 

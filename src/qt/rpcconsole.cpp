@@ -125,7 +125,6 @@ public:
     }
 };
 
-
 #include <qt/rpcconsole.moc>
 
 /**
@@ -481,6 +480,7 @@ RPCConsole::RPCConsole(const PlatformStyle *_platformStyle, QWidget *parent) :
     ui->fontBiggerButton->setIcon(platformStyle->MultiStatesIcon(":/icons/fontbigger", PlatformStyle::PushButton));
     ui->fontSmallerButton->setIcon(platformStyle->MultiStatesIcon(":/icons/fontsmaller", PlatformStyle::PushButton));
     ui->promptIcon->setIcon(platformStyle->MultiStatesIcon(":/icons/prompticon", PlatformStyle::PushButton));
+
     // Install event filter for up and down arrow
     ui->lineEdit->installEventFilter(this);
     ui->messagesWidget->installEventFilter(this);
@@ -790,11 +790,10 @@ void RPCConsole::clear(bool clearHistory)
 #endif
 	 
     message(CMD_REPLY, (tr("Welcome to the %1 RPC console.").arg(tr(PACKAGE_NAME)) + "<br>" +
-                        tr("Use up and down arrows to navigate history, and %1 to clear screen.").arg("<b>"+clsKey+"</b>") + "<br>" +
                         tr("Type %1 for an overview of available commands.").arg("<b>help</b>") + "<br>" +
                         tr("For more information on using this console type %1.").arg("<b>help-console</b>") +
                         "<br><span class=\"secwarning\"><br>" +
-                        tr("WARNING: Scammers have been active, telling users to type commands here, stealing their wallet contents. Do not use this console without fully understanding the ramifications of a command.") +
+                        tr("WARNING: Do not use this console without fully understanding the ramification of a command.") +
                         "</span>"),
                         true);
 }
@@ -962,6 +961,11 @@ void RPCConsole::on_tabWidget_currentChanged(int index)
 void RPCConsole::on_openDebugLogfileButton_clicked()
 {
     GUIUtil::openDebugLogfile();
+}
+
+void RPCConsole::showBackups()
+{
+    GUIUtil::showBackups();
 }
 
 void RPCConsole::scrollToEnd()
