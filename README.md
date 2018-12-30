@@ -1,4 +1,4 @@
-HTMLCOIN 2.2 Core
+VIPSTARCOIN Core Ver 1.0
 =========
 
 (Japanese HP)https://www.vipstarcoin.jp/
