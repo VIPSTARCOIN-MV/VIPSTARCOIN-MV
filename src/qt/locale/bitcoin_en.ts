@@ -80,12 +80,12 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>These are your VIPSTARCOIN addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your VIPSTARCOIN-MV addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>These are your VIPSTARCOIN addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your VIPSTARCOIN-MV addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -216,7 +216,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR VIPSTARCOIN&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR VIPSTARCOIN-MV&lt;/b&gt;!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -232,7 +232,7 @@
     </message>
     <message>
         <location line="-56"/>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your VIPSTARCOIN from being stolen by malware infecting your computer.</source>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your VIPSTARCOIN-MV from being stolen by malware infecting your computer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -495,8 +495,8 @@
     </message>
     <message>
         <location line="-511"/>
-        <source>Send coins to a VIPSTARCOIN address</source>
-        <translation>Send coins to a VIPSTARCOIN address</translation>
+        <source>Send coins to a VIPSTARCOIN-MV address</source>
+        <translation>Send coins to a VIPSTARCOIN-MV address</translation>
     </message>
     <message>
         <location line="+67"/>
@@ -525,8 +525,8 @@
     </message>
     <message>
         <location line="+517"/>
-        <source>VIPSTARCOIN</source>
-        <translation>VIPSTARCOIN</translation>
+        <source>VIPSTARCOIN-MV</source>
+        <translation>VIPSTARCOIN-MV</translation>
     </message>
     <message>
         <location line="-743"/>
@@ -560,13 +560,13 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your VIPSTARCOIN addresses to prove you own them</source>
-        <translation>Sign messages with your VIPSTARCOIN addresses to prove you own them</translation>
+        <source>Sign messages with your VIPSTARCOIN-MV addresses to prove you own them</source>
+        <translation>Sign messages with your VIPSTARCOIN-MV addresses to prove you own them</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified VIPSTARCOIN addresses</source>
-        <translation>Verify messages to ensure they were signed with specified VIPSTARCOIN addresses</translation>
+        <source>Verify messages to ensure they were signed with specified VIPSTARCOIN-MV addresses</source>
+        <translation>Verify messages to ensure they were signed with specified VIPSTARCOIN-MV addresses</translation>
     </message>
     <message>
         <location line="+58"/>
@@ -590,7 +590,7 @@
     </message>
     <message>
         <location line="-158"/>
-        <source>Request payments (generates QR codes and vipstarcoin: URIs)</source>
+        <source>Request payments (generates QR codes and vipstarcoin-mv: URIs)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -605,7 +605,7 @@
     </message>
     <message>
         <location line="+3"/>
-        <source>Open a vipstarcoin: URI or payment request</source>
+        <source>Open a vipstarcoin-mv: URI or payment request</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -615,10 +615,10 @@
     </message>
     <message numerus="yes">
         <location line="+357"/>
-        <source>%n active connection(s) to VIPSTARCOIN network</source>
+        <source>%n active connection(s) to VIPSTARCOIN-MV network</source>
         <translation>
-            <numerusform>%n active connection to VIPSTARCOIN network</numerusform>
-            <numerusform>%n active connections to VIPSTARCOIN network</numerusform>
+            <numerusform>%n active connection to VIPSTARCOIN-MV network</numerusform>
+            <numerusform>%n active connections to VIPSTARCOIN-MV network</numerusform>
         </translation>
     </message>
     <message>
@@ -676,7 +676,7 @@
     </message>
     <message>
         <location line="-441"/>
-        <source>Show the %1 help message to get a list with possible VIPSTARCOIN command-line options</source>
+        <source>Show the %1 help message to get a list with possible VIPSTARCOIN-MV command-line options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -791,7 +791,7 @@
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+534"/>
-        <source>A fatal error occurred. VIPSTARCOIN can no longer continue safely and will quit.</source>
+        <source>A fatal error occurred. VIPSTARCOIN-MV can no longer continue safely and will quit.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1034,7 +1034,7 @@
     </message>
     <message>
         <location line="+72"/>
-        <source>The entered address &quot;%1&quot; is not a valid VIPSTARCOIN address.</source>
+        <source>The entered address &quot;%1&quot; is not a valid VIPSTARCOIN-MV address.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1194,8 +1194,8 @@
     </message>
     <message>
         <location filename="../intro.cpp" line="+20"/>
-        <source>VIPSTARCOIN</source>
-        <translation type="unfinished">VIPSTARCOIN</translation>
+        <source>VIPSTARCOIN-MV</source>
+        <translation type="unfinished">VIPSTARCOIN-MV</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1209,7 +1209,7 @@
     </message>
     <message>
         <location line="+8"/>
-        <source>%1 will download and store a copy of the VIPSTARCOIN block chain.</source>
+        <source>%1 will download and store a copy of the VIPSTARCOIN-MV block chain.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1253,12 +1253,12 @@
     </message>
     <message>
         <location line="+119"/>
-        <source>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the VIPSTARCOIN network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the VIPSTARCOIN-MV network, as detailed below.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+19"/>
-        <source>Attempting to spend VIPSTARCOIN that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <source>Attempting to spend VIPSTARCOIN-MV that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1476,8 +1476,8 @@
     </message>
     <message>
         <location line="+30"/>
-        <source>Automatically open the VIPSTARCOIN client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatically open the VIPSTARCOIN client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
+        <source>Automatically open the VIPSTARCOIN-MV client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatically open the VIPSTARCOIN-MV client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1496,7 +1496,7 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the VIPSTARCOIN network through a SOCKS5 proxy.</source>
+        <source>Connect to the VIPSTARCOIN-MV network through a SOCKS5 proxy.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1544,7 +1544,7 @@
     </message>
     <message>
         <location line="+25"/>
-        <source>Connect to the VIPSTARCOIN network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <source>Connect to the VIPSTARCOIN-MV network through a separate SOCKS5 proxy for Tor hidden services.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1684,8 +1684,8 @@
     <message>
         <location line="+62"/>
         <location line="+386"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the VIPSTARCOIN network after a connection is established, but this process has not completed yet.</source>
-        <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the VIPSTARCOIN network after a connection is established, but this process has not completed yet.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the VIPSTARCOIN-MV network after a connection is established, but this process has not completed yet.</source>
+        <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the VIPSTARCOIN-MV network after a connection is established, but this process has not completed yet.</translation>
     </message>
     <message>
         <location line="-139"/>
@@ -1817,7 +1817,7 @@
     </message>
     <message>
         <location line="398"/>
-        <source>Cannot start vipstarcoin: click-to-pay handler</source>
+        <source>Cannot start vipstarcoin-mv: click-to-pay handler</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1839,7 +1839,7 @@
     </message>
     <message>
         <location line="+8"/>
-        <source>URI cannot be parsed! This can be caused by an invalid VIPSTARCOIN address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid VIPSTARCOIN-MV address or malformed URI parameters.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1971,7 +1971,7 @@
     </message>
     <message>
         <location filename="../guiutil.cpp" line="+130"/>
-        <source>Enter a VIPSTARCOIN address (e.g. %1)</source>
+        <source>Enter a VIPSTARCOIN-MV address (e.g. %1)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2552,7 +2552,7 @@
     <message>
         <location line="-3"/>
         <location line="+46"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the VIPSTARCOIN network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the VIPSTARCOIN-MV network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2860,7 +2860,7 @@
     <message>
         <location line="+78"/>
         <location line="+13"/>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for VIPSTARCOIN transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for VIPSTARCOIN-MV transactions than the network can process.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3081,7 +3081,7 @@
     </message>
     <message>
         <location line="+101"/>
-        <source>Warning: Invalid VIPSTARCOIN address</source>
+        <source>Warning: Invalid VIPSTARCOIN-MV address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3141,7 +3141,7 @@
     </message>
     <message>
         <location line="+39"/>
-        <source>The VIPSTARCOIN address to send the payment to</source>
+        <source>The VIPSTARCOIN-MV address to send the payment to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3168,7 +3168,7 @@
     </message>
     <message>
         <location line="-1021"/>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less VIPSTARCOIN than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less VIPSTARCOIN-MV than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3203,7 +3203,7 @@
     </message>
     <message>
         <location line="+54"/>
-        <source>A message that was attached to the vipstarcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the VIPSTARCOIN network.</source>
+        <source>A message that was attached to the vipstarcoin-mv: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the VIPSTARCOIN-MV network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3260,12 +3260,12 @@
     </message>
     <message>
         <location line="+6"/>
-        <source>You can sign messages/agreements with your addresses to prove you can receive vipstarcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive vipstarcoin-mvs sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+18"/>
-        <source>The VIPSTARCOIN address to sign the message with</source>
+        <source>The VIPSTARCOIN-MV address to sign the message with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3307,8 +3307,8 @@
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this VIPSTARCOIN address</source>
-        <translation>Sign the message to prove you own this VIPSTARCOIN address</translation>
+        <source>Sign the message to prove you own this VIPSTARCOIN-MV address</source>
+        <translation>Sign the message to prove you own this VIPSTARCOIN-MV address</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3338,13 +3338,13 @@
     </message>
     <message>
         <location line="+21"/>
-        <source>The VIPSTARCOIN address the message was signed with</source>
+        <source>The VIPSTARCOIN-MV address the message was signed with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+37"/>
-        <source>Verify the message to ensure it was signed with the specified VIPSTARCOIN address</source>
-        <translation>Verify the message to ensure it was signed with the specified VIPSTARCOIN address</translation>
+        <source>Verify the message to ensure it was signed with the specified VIPSTARCOIN-MV address</source>
+        <translation>Verify the message to ensure it was signed with the specified VIPSTARCOIN-MV address</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4256,8 +4256,8 @@
     </message>
     <message>
         <location line="-397"/>
-        <source>VIPSTARCOIN Core</source>
-        <translation type="unfinished">VIPSTARCOIN Core</translation>
+        <source>VIPSTARCOIN-MV Core</source>
+        <translation type="unfinished">VIPSTARCOIN-MV Core</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5562,7 +5562,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>The vipstarcoin address that will be used to create the contract.</source>
+        <source>The vipstarcoin-mv address that will be used to create the contract.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5695,7 +5695,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>The vipstarcoin address that will be used as sender.</source>
+        <source>The vipstarcoin-mv address that will be used as sender.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5818,7 +5818,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>The vipstarcoin address that will be used as sender.</source>
+        <source>The vipstarcoin-mv address that will be used as sender.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

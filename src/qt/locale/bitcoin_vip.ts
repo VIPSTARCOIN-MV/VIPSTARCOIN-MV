@@ -62,12 +62,12 @@
         <translation>受け取りアドレス</translation>
     </message>
     <message>
-        <source>These are your VIPSTARCOIN addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>これらは支払いを送信するためのあなたのビップスターコインアドレスアドレスだお。コインを送信する前に、常に額と受信アドレスを確認してね( ^ω^)</translation>
+        <source>These are your VIPSTARCOIN-MV addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>これらは支払いを送信するためのあなたのVIPSTARCOIN-MVアドレスアドレスだお。コインを送信する前に、常に額と受信アドレスを確認してね( ^ω^)</translation>
     </message>
     <message>
-        <source>These are your VIPSTARCOIN addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>これらは支払いを受け取るためのビップスターコインアドレスだお。トランザクションごとに新しい受け取り用アドレスを作成することを推奨するお。</translation>
+        <source>These are your VIPSTARCOIN-MV addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>これらは支払いを受け取るためのVIPSTARCOIN-MVアドレスだお。トランザクションごとに新しい受け取り用アドレスを作成することを推奨するお。</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -168,8 +168,8 @@
         <translation>ウォレットの暗号化を確認するお</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR VIPSTARCOIN&lt;/b&gt;!</source>
-        <translation>警告: もしもあなたのウォレットを暗号化してパスフレーズを失ってしまったなら、&lt;b&gt;あなたのビップスターコインはすべて失われるお....&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR VIPSTARCOIN-MV&lt;/b&gt;!</source>
+        <translation>警告: もしもあなたのウォレットを暗号化してパスフレーズを失ってしまったなら、&lt;b&gt;あなたのVIPSTARCOIN-MVはすべて失われるお....&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -180,8 +180,8 @@
         <translation>ウォレットは暗号化されたお( ^ω^)</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your VIPSTARCOIN from being stolen by malware infecting your computer.</source>
-        <translation>暗号化処理を完了させるため %1 をいますぐ終了するお。ウォレットの暗号化では、コンピュータに感染したマルウェアなどによるビップスターコインの盗難から完全に守ることはできないことに注意してね。</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your VIPSTARCOIN-MV from being stolen by malware infecting your computer.</source>
+        <translation>暗号化処理を完了させるため %1 をいますぐ終了するお。ウォレットの暗号化では、コンピュータに感染したマルウェアなどによるVIPSTARCOIN-MVの盗難から完全に守ることはできないことに注意してね。</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -390,8 +390,8 @@
         <translation>ディスク上のブロックのインデックスを再作成中...</translation>
     </message>
     <message>
-        <source>Send coins to a VIPSTARCOIN address</source>
-        <translation>ビップスターコインアドレスにコインを送るお</translation>
+        <source>Send coins to a VIPSTARCOIN-MV address</source>
+        <translation>VIPSTARCOIN-MVアドレスにコインを送るお</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -414,8 +414,8 @@
         <translation>メッセージの検証... (&amp;V)</translation>
     </message>
     <message>
-        <source>VIPSTARCOIN</source>
-        <translation>ビップスターコイン</translation>
+        <source>VIPSTARCOIN-MV</source>
+        <translation>VIPSTARCOIN-MV</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -442,12 +442,12 @@
         <translation>あなたのウォレットの秘密鍵を暗号化するお( ^ω^)</translation>
     </message>
     <message>
-        <source>Sign messages with your VIPSTARCOIN addresses to prove you own them</source>
-        <translation>あなたが所有していることを証明するために、あなたのビップスターコインアドレスでメッセージに署名してね( ^ω^)</translation>
+        <source>Sign messages with your VIPSTARCOIN-MV addresses to prove you own them</source>
+        <translation>あなたが所有していることを証明するために、あなたのVIPSTARCOIN-MVアドレスでメッセージに署名してね( ^ω^)</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified VIPSTARCOIN addresses</source>
-        <translation>指定されたビップスターコインアドレスで署名されたことを確認するためにメッセージを検証するお</translation>
+        <source>Verify messages to ensure they were signed with specified VIPSTARCOIN-MV addresses</source>
+        <translation>指定されたVIPSTARCOIN-MVアドレスで署名されたことを確認するためにメッセージを検証するお</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -466,8 +466,8 @@
         <translation>タブツールバー</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and vipstarcoin: URIs)</source>
-        <translation>支払いを要求するお (QRコードとvipstarcoin:ではじまるURIを生成するお)</translation>
+        <source>Request payments (generates QR codes and vipstarcoin-mv: URIs)</source>
+        <translation>支払いを要求するお (QRコードとvipstarcoin-mv:ではじまるURIを生成するお)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -478,16 +478,16 @@
         <translation>支払いを受け取るアドレスとラベルのリストを表示するお</translation>
     </message>
     <message>
-        <source>Open a vipstarcoin: URI or payment request</source>
-        <translation>vipstarcoin: URIまたは支払いリクエストを開くお</translation>
+        <source>Open a vipstarcoin-mv: URI or payment request</source>
+        <translation>vipstarcoin-mv: URIまたは支払いリクエストを開くお</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>コマンドラインオプション (&amp;C)</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to VIPSTARCOIN network</source>
-        <translation><numerusform>%n の VIPSTARCOIN ネットワークへのアクティブな接続</numerusform></translation>
+        <source>%n active connection(s) to VIPSTARCOIN-MV network</source>
+        <translation><numerusform>%n の VIPSTARCOIN-MV ネットワークへのアクティブな接続</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -530,8 +530,8 @@
         <translation>バージョンは最新だお</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible VIPSTARCOIN command-line options</source>
-        <translation>有効なビップスターコインのコマンドライン オプションを見るために %1 のヘルプメッセージを表示するお。</translation>
+        <source>Show the %1 help message to get a list with possible VIPSTARCOIN-MV command-line options</source>
+        <translation>有効なVIPSTARCOIN-MVのコマンドライン オプションを見るために %1 のヘルプメッセージを表示するお。</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -600,8 +600,8 @@
         <translation>ウォレットは&lt;b&gt;暗号化されて、ロックされているお( ^ω^)&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. VIPSTARCOIN can no longer continue safely and will quit.</source>
-        <translation>致命的なエラーが発生したお....VIPSTARCOIN は安全に継続することができず終了するお(´・ω・`)</translation>
+        <source>A fatal error occurred. VIPSTARCOIN-MV can no longer continue safely and will quit.</source>
+        <translation>致命的なエラーが発生したお....VIPSTARCOIN-MV は安全に継続することができず終了するお(´・ω・`)</translation>
     </message>
 </context>
 <context>
@@ -794,8 +794,8 @@
         <translation>送信アドレスを編集</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid VIPSTARCOIN address.</source>
-        <translation>入力されたアドレス "%1" は無効なビップスターコインアドレスだお。</translation>
+        <source>The entered address "%1" is not a valid VIPSTARCOIN-MV address.</source>
+        <translation>入力されたアドレス "%1" は無効なVIPSTARCOIN-MVアドレスだお。</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -903,8 +903,8 @@
         <translation>これはプログラム最初の起動だお。%1 がデータを保存する場所を選択してね。</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the VIPSTARCOIN block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>%1 は、ビップスターコインのブロックチェーンのコピーを、ダウンロードして保存するお。少なくとも %2 ギガバイトのデータが、このディレクトリに保存されるお。そしてそれは時間と共に増加するお。またウォレットもこのディレクトリに保存されるお。</translation>
+        <source>%1 will download and store a copy of the VIPSTARCOIN-MV block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>%1 は、VIPSTARCOIN-MVのブロックチェーンのコピーを、ダウンロードして保存するお。少なくとも %2 ギガバイトのデータが、このディレクトリに保存されるお。そしてそれは時間と共に増加するお。またウォレットもこのディレクトリに保存されるお。</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -938,12 +938,12 @@
         <translation>フォーム</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the VIPSTARCOIN network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the VIPSTARCOIN-MV network, as detailed below.</source>
         <translation>うはｗｗｗｗｗ同期終わるまでおとなしく待ておｗｗｗｗｗ下のやつ見とけｗｗｗｗｗ</translation>
     </message>
     <message>
-        <source>Attempting to spend VIPSTARCOIN that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation>まだ表示されていないトランザクションが影響するビップスターコインを使用しようとすると、ネットワークから認証がなされないお。</translation>
+        <source>Attempting to spend VIPSTARCOIN-MV that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>まだ表示されていないトランザクションが影響するVIPSTARCOIN-MVを使用しようとすると、ネットワークから認証がなされないお。</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1108,16 +1108,16 @@
         <translation>未検証のおつりを使用するお (&amp;S)</translation>
     </message>
     <message>
-        <source>Automatically open the VIPSTARCOIN client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>自動的にルーター上のビップスターコインクライアントのポートを開くお。あなたのルーターが UPnP に対応していて、それが有効になっている場合に作動するお。</translation>
+        <source>Automatically open the VIPSTARCOIN-MV client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>自動的にルーター上のVIPSTARCOIN-MVクライアントのポートを開くお。あなたのルーターが UPnP に対応していて、それが有効になっている場合に作動するお。</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>UPnP を使ってポートを割り当てるお (&amp;U)</translation>
     </message>
     <message>
-        <source>Connect to the VIPSTARCOIN network through a SOCKS5 proxy.</source>
-        <translation>SOCKS5 プロキシ経由でビップスターコインネットワークに接続するお</translation>
+        <source>Connect to the VIPSTARCOIN-MV network through a SOCKS5 proxy.</source>
+        <translation>SOCKS5 プロキシ経由でVIPSTARCOIN-MVネットワークに接続するお</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1156,8 +1156,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the VIPSTARCOIN network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Tor秘匿サービスを利用するため、独立なSOCKS5プロキシ経由でビップスターコインネットワークに接続するお</translation>
+        <source>Connect to the VIPSTARCOIN-MV network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Tor秘匿サービスを利用するため、独立なSOCKS5プロキシ経由でVIPSTARCOIN-MVネットワークに接続するお</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services:</source>
@@ -1291,8 +1291,8 @@
         <translation>フォーム</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the VIPSTARCOIN network after a connection is established, but this process has not completed yet.</source>
-        <translation>表示された情報は古いかもしれないお。接続が確立されると、あなたのウォレットはビップスターコインネットワークと自動的に同期するけど、このプロセスはまだ完了していないお。</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the VIPSTARCOIN-MV network after a connection is established, but this process has not completed yet.</source>
+        <translation>表示された情報は古いかもしれないお。接続が確立されると、あなたのウォレットはVIPSTARCOIN-MVネットワークと自動的に同期するけど、このプロセスはまだ完了していないお。</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1394,8 +1394,8 @@
         <translation>支払いのリクエストのエラーだお</translation>
     </message>
     <message>
-        <source>Cannot start vipstarcoin: click-to-pay handler</source>
-        <translation>VIPSTARCOIN を起動出来ないお: click-to-pay handler</translation>
+        <source>Cannot start vipstarcoin-mv: click-to-pay handler</source>
+        <translation>VIPSTARCOIN-MV を起動出来ないお: click-to-pay handler</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -1410,8 +1410,8 @@
         <translation>支払いのアドレス「%1」は無効だお</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid VIPSTARCOIN address or malformed URI parameters.</source>
-        <translation>URI を解析出来ないお! これは無効な VIPSTARCOIN アドレスあるいや不正な形式の URI パラメーターによって引き起こされる場合があるお。</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid VIPSTARCOIN-MV address or malformed URI parameters.</source>
+        <translation>URI を解析出来ないお! これは無効な VIPSTARCOIN-MV アドレスあるいや不正な形式の URI パラメーターによって引き起こされる場合があるお。</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1504,8 +1504,8 @@
         <translation>総額</translation>
     </message>
     <message>
-        <source>Enter a VIPSTARCOIN address (e.g. %1)</source>
-        <translation>ビップスターコインアドレスを入力してね( ^ω^) (例 %1)</translation>
+        <source>Enter a VIPSTARCOIN-MV address (e.g. %1)</source>
+        <translation>VIPSTARCOIN-MVアドレスを入力してね( ^ω^) (例 %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1924,8 +1924,8 @@
         <translation>既存の受取用アドレスを再利用するお (非推奨) (&amp;E)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the VIPSTARCOIN network.</source>
-        <translation>支払リクエストが開始された時に表示される、支払リクエストに添える任意のメッセージだお。注意：メッセージはビップスターコインネットワークを通じて、支払と共に送られるわけじゃないお。</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the VIPSTARCOIN-MV network.</source>
+        <translation>支払リクエストが開始された時に表示される、支払リクエストに添える任意のメッセージだお。注意：メッセージはVIPSTARCOIN-MVネットワークを通じて、支払と共に送られるわけじゃないお。</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2162,8 +2162,8 @@
         <translation>最小手数料</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for VIPSTARCOIN transactions than the network can process.</source>
-        <translation>ブロックの容量に比べてトランザクション流量が少ないうちは最小手数料のみの支払で十分だお。しかしながらネットワークが処理しきれないほどVIPSTARCOINトランザクションの需要がひとたび生まれちゃった場合には、永遠に検証がされないトランザクションになってしまう可能性があることに注意してね。</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for VIPSTARCOIN-MV transactions than the network can process.</source>
+        <translation>ブロックの容量に比べてトランザクション流量が少ないうちは最小手数料のみの支払で十分だお。しかしながらネットワークが処理しきれないほどVIPSTARCOIN-MVトランザクションの需要がひとたび生まれちゃった場合には、永遠に検証がされないトランザクションになってしまう可能性があることに注意してね。</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -2326,8 +2326,8 @@
         <translation><numerusform>%n ブロック以内に検証が開始されると予想されるお。</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid VIPSTARCOIN address</source>
-        <translation>警告：無効なVIPSTARCOINアドレスだお</translation>
+        <source>Warning: Invalid VIPSTARCOIN-MV address</source>
+        <translation>警告：無効なVIPSTARCOIN-MVアドレスだお</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2373,8 +2373,8 @@
         <translation>これは通常の支払だお。</translation>
     </message>
     <message>
-        <source>The VIPSTARCOIN address to send the payment to</source>
-        <translation>支払の送金先ビップスターコインアドレス</translation>
+        <source>The VIPSTARCOIN-MV address to send the payment to</source>
+        <translation>支払の送金先VIPSTARCOIN-MVアドレス</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2393,8 +2393,8 @@
         <translation>この項目を削除するお</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less VIPSTARCOIN than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>送金する金額から手数料が差し引かれるお。受取人は数量フィールドで指定した量よりも少ないビップスターコインを受け取るお。受取人が複数いる場合には、手数料は均等割されるお。</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less VIPSTARCOIN-MV than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>送金する金額から手数料が差し引かれるお。受取人は数量フィールドで指定した量よりも少ないVIPSTARCOIN-MVを受け取るお。受取人が複数いる場合には、手数料は均等割されるお。</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2417,8 +2417,8 @@
         <translation>このアドレスに対するラベルを入力することで、使用済みアドレスの一覧に追加することができるお</translation>
     </message>
     <message>
-        <source>A message that was attached to the vipstarcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the VIPSTARCOIN network.</source>
-        <translation>vipstarcoin: URIに添付されていたメッセージだお。これは参照用としてトランザクションとともに保存されるお。注意：このメッセージはビップスターコインネットワークを通して送信されるわけじゃないお。</translation>
+        <source>A message that was attached to the vipstarcoin-mv: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the VIPSTARCOIN-MV network.</source>
+        <translation>vipstarcoin-mv: URIに添付されていたメッセージだお。これは参照用としてトランザクションとともに保存されるお。注意：このメッセージはVIPSTARCOIN-MVネットワークを通して送信されるわけじゃないお。</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2462,12 +2462,12 @@
         <translation>メッセージの署名 (&amp;S)</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive VIPSTARCOIN sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>あなたの所有しているアドレスによりメッセージや合意書に署名をすることで、それらアドレスに対して送られたビップスターコインを受け取れることを証明できるお。フィッシング攻撃により不正にあなたの識別情報を署名させられてしまうことを防ぐために、不明確なものやランダムなものに対して署名しないよう注意してね。合意することが可能な、よく詳細の記された文言にのみ署名するようにしてね。</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive VIPSTARCOIN-MV sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>あなたの所有しているアドレスによりメッセージや合意書に署名をすることで、それらアドレスに対して送られたVIPSTARCOIN-MVを受け取れることを証明できるお。フィッシング攻撃により不正にあなたの識別情報を署名させられてしまうことを防ぐために、不明確なものやランダムなものに対して署名しないよう注意してね。合意することが可能な、よく詳細の記された文言にのみ署名するようにしてね。</translation>
     </message>
     <message>
-        <source>The VIPSTARCOIN address to sign the message with</source>
-        <translation>メッセージを署名するVIPSTARCOINアドレス</translation>
+        <source>The VIPSTARCOIN-MV address to sign the message with</source>
+        <translation>メッセージを署名するVIPSTARCOIN-MVアドレス</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2498,8 +2498,8 @@
         <translation>現在の署名をシステムのクリップボードにコピーするお</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this VIPSTARCOIN address</source>
-        <translation>このビップスターコインアドレスを所有していることを証明するためにメッセージに署名</translation>
+        <source>Sign the message to prove you own this VIPSTARCOIN-MV address</source>
+        <translation>このVIPSTARCOIN-MVアドレスを所有していることを証明するためにメッセージに署名</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2522,12 +2522,12 @@
         <translation>受取人のアドレスとメッセージおよび署名を以下に入力し、メッセージの署名を検証してね（改行やスペース、タブなども完全に一致するよう注意してね）。中間者攻撃により騙されるのを防ぐため、署名対象のメッセージに書かれていること以上の意味を署名から読み取ろうとしないよう注意してね。これは署名作成者がこのアドレスで受け取ったことを証明するだけであり、トランザクションの送信権限を証明するものではないことに注意してね！</translation>
     </message>
     <message>
-        <source>The VIPSTARCOIN address the message was signed with</source>
-        <translation>メッセージの署名に使われたビップスターコインアドレス</translation>
+        <source>The VIPSTARCOIN-MV address the message was signed with</source>
+        <translation>メッセージの署名に使われたVIPSTARCOIN-MVアドレス</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified VIPSTARCOIN address</source>
-        <translation>指定されたビップスターコインアドレスで署名されたことを保証するメッセージを検証</translation>
+        <source>Verify the message to ensure it was signed with the specified VIPSTARCOIN-MV address</source>
+        <translation>指定されたVIPSTARCOIN-MVアドレスで署名されたことを保証するメッセージを検証</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -3203,8 +3203,8 @@
         <translation>HTTPサーバを開始できなかったお。詳細はデバッグログを確認してね。</translation>
     </message>
     <message>
-        <source>VIPSTARCOIN Core</source>
-        <translation>VIPSTARCOIN Core</translation>
+        <source>VIPSTARCOIN-MV Core</source>
+        <translation>VIPSTARCOIN-MV Core</translation>
     </message>
     <message>
         <source>The %s developers</source>

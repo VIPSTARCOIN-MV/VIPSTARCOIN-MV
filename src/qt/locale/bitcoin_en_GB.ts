@@ -62,12 +62,12 @@
         <translation>Receiving addresses</translation>
     </message>
     <message>
-        <source>These are your VIPSTARCOIN addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>These are your VIPSTARCOIN addresses for sending payments. Always check the amount and the receiving address before sending coins.</translation>
+        <source>These are your VIPSTARCOIN-MV addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>These are your VIPSTARCOIN-MV addresses for sending payments. Always check the amount and the receiving address before sending coins.</translation>
     </message>
     <message>
-        <source>These are your VIPSTARCOIN addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>These are your VIPSTARCOIN addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</translation>
+        <source>These are your VIPSTARCOIN-MV addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>These are your VIPSTARCOIN-MV addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -342,8 +342,8 @@
         <translation>Reindexing blocks on disk...</translation>
     </message>
     <message>
-        <source>Send coins to a VIPSTARCOIN address</source>
-        <translation>Send coins to a VIPSTARCOIN address</translation>
+        <source>Send coins to a VIPSTARCOIN-MV address</source>
+        <translation>Send coins to a VIPSTARCOIN-MV address</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -394,12 +394,12 @@
         <translation>Encrypt the private keys that belong to your wallet</translation>
     </message>
     <message>
-        <source>Sign messages with your VIPSTARCOIN addresses to prove you own them</source>
-        <translation>Sign messages with your VIPSTARCOIN addresses to prove you own them</translation>
+        <source>Sign messages with your VIPSTARCOIN-MV addresses to prove you own them</source>
+        <translation>Sign messages with your VIPSTARCOIN-MV addresses to prove you own them</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified VIPSTARCOIN addresses</source>
-        <translation>Verify messages to ensure they were signed with specified VIPSTARCOIN addresses</translation>
+        <source>Verify messages to ensure they were signed with specified VIPSTARCOIN-MV addresses</source>
+        <translation>Verify messages to ensure they were signed with specified VIPSTARCOIN-MV addresses</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -418,8 +418,8 @@
         <translation>Tabs toolbar</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and vipstarcoin: URIs)</source>
-        <translation>Request payments (generates QR codes and vipstarcoin: URIs)</translation>
+        <source>Request payments (generates QR codes and vipstarcoin-mv: URIs)</source>
+        <translation>Request payments (generates QR codes and vipstarcoin-mv: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -430,16 +430,16 @@
         <translation>Show the list of used receiving addresses and labels</translation>
     </message>
     <message>
-        <source>Open a vipstarcoin: URI or payment request</source>
-        <translation>Open a vipstarcoin: URI or payment request</translation>
+        <source>Open a vipstarcoin-mv: URI or payment request</source>
+        <translation>Open a vipstarcoin-mv: URI or payment request</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;Command-line options</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to VIPSTARCOIN network</source>
-        <translation><numerusform>%n active connection to VIPSTARCOIN network</numerusform><numerusform>%n active connections to VIPSTARCOIN network</numerusform></translation>
+        <source>%n active connection(s) to VIPSTARCOIN-MV network</source>
+        <translation><numerusform>%n active connection to VIPSTARCOIN-MV network</numerusform><numerusform>%n active connections to VIPSTARCOIN-MV network</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -482,8 +482,8 @@
         <translation>Up to date</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible VIPSTARCOIN command-line options</source>
-        <translation>Show the %1 help message to get a list with possible VIPSTARCOIN command-line options</translation>
+        <source>Show the %1 help message to get a list with possible VIPSTARCOIN-MV command-line options</source>
+        <translation>Show the %1 help message to get a list with possible VIPSTARCOIN-MV command-line options</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -875,8 +875,8 @@
         <translation>Use a custom data directory:</translation>
     </message>
     <message>
-        <source>VIPSTARCOIN</source>
-        <translation>VIPSTARCOIN</translation>
+        <source>VIPSTARCOIN-MV</source>
+        <translation>VIPSTARCOIN-MV</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -887,8 +887,8 @@
         <translation>Approximately %1 GB of data will be stored in this directory.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the VIPSTARCOIN block chain.</source>
-        <translation>%1 will download and store a copy of the VIPSTARCOIN block chain.</translation>
+        <source>%1 will download and store a copy of the VIPSTARCOIN-MV block chain.</source>
+        <translation>%1 will download and store a copy of the VIPSTARCOIN-MV block chain.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -922,8 +922,8 @@
         <translation>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronising with the Qtum network, as detailed below.</translation>
     </message>
     <message>
-        <source>Attempting to spend VIPSTARCOIN that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation>Attempting to spend VIPSTARCOIN that are affected by not-yet-displayed transactions will not be accepted by the network.</translation>
+        <source>Attempting to spend VIPSTARCOIN-MV that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>Attempting to spend VIPSTARCOIN-MV that are affected by not-yet-displayed transactions will not be accepted by the network.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1092,8 +1092,8 @@
         <translation>&amp;Spend unconfirmed change</translation>
     </message>
     <message>
-        <source>Automatically open the VIPSTARCOIN client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatically open the VIPSTARCOIN client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
+        <source>Automatically open the VIPSTARCOIN-MV client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatically open the VIPSTARCOIN-MV client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1108,8 +1108,8 @@
         <translation>Allow incomin&amp;g connections</translation>
     </message>
     <message>
-        <source>Connect to the VIPSTARCOIN network through a SOCKS5 proxy.</source>
-        <translation>Connect to the VIPSTARCOIN network through a SOCKS5 proxy.</translation>
+        <source>Connect to the VIPSTARCOIN-MV network through a SOCKS5 proxy.</source>
+        <translation>Connect to the VIPSTARCOIN-MV network through a SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1144,8 +1144,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the VIPSTARCOIN network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Connect to the VIPSTARCOIN network through a separate SOCKS5 proxy for Tor hidden services.</translation>
+        <source>Connect to the VIPSTARCOIN-MV network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Connect to the VIPSTARCOIN-MV network through a separate SOCKS5 proxy for Tor hidden services.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -2285,8 +2285,8 @@
         <translation><numerusform>Estimated to begin confirmation within %n block.</numerusform><numerusform>Estimated to begin confirmation within %n blocks.</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid VIPSTARCOIN address</source>
-        <translation>Warning: Invalid VIPSTARCOIN address</translation>
+        <source>Warning: Invalid VIPSTARCOIN-MV address</source>
+        <translation>Warning: Invalid VIPSTARCOIN-MV address</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2328,8 +2328,8 @@
         <translation>This is a normal payment.</translation>
     </message>
     <message>
-        <source>The VIPSTARCOIN address to send the payment to</source>
-        <translation>The VIPSTARCOIN address to send the payment to</translation>
+        <source>The VIPSTARCOIN-MV address to send the payment to</source>
+        <translation>The VIPSTARCOIN-MV address to send the payment to</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2348,8 +2348,8 @@
         <translation>Remove this entry</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less VIPSTARCOIN than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>The fee will be deducted from the amount being sent. The recipient will receive less VIPSTARCOIN than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less VIPSTARCOIN-MV than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>The fee will be deducted from the amount being sent. The recipient will receive less VIPSTARCOIN-MV than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2376,8 +2376,8 @@
         <translation>Enter a label for this address to add it to the list of used addresses</translation>
     </message>
     <message>
-        <source>A message that was attached to the vipstarcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the VIPSTARCOIN network.</source>
-        <translation>A message that was attached to the vipstarcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the VIPSTARCOIN network.</translation>
+        <source>A message that was attached to the vipstarcoin-mv: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the VIPSTARCOIN-MV network.</source>
+        <translation>A message that was attached to the vipstarcoin-mv: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the VIPSTARCOIN-MV network.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2425,8 +2425,8 @@
         <translation>You can sign messages/agreements with your addresses to prove you can receive qtums sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</translation>
     </message>
     <message>
-        <source>The VIPSTARCOIN address to sign the message with</source>
-        <translation>The VIPSTARCOIN address to sign the message with</translation>
+        <source>The VIPSTARCOIN-MV address to sign the message with</source>
+        <translation>The VIPSTARCOIN-MV address to sign the message with</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2481,12 +2481,12 @@
         <translation>Enter the receiver's address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack. Note that this only proves the signing party receives with the address, it cannot prove sendership of any transaction!</translation>
     </message>
     <message>
-        <source>The VIPSTARCOIN address the message was signed with</source>
-        <translation>The VIPSTARCOIN address the message was signed with</translation>
+        <source>The VIPSTARCOIN-MV address the message was signed with</source>
+        <translation>The VIPSTARCOIN-MV address the message was signed with</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified VIPSTARCOIN address</source>
-        <translation>Verify the message to ensure it was signed with the specified VIPSTARCOIN address</translation>
+        <source>Verify the message to ensure it was signed with the specified VIPSTARCOIN-MV address</source>
+        <translation>Verify the message to ensure it was signed with the specified VIPSTARCOIN-MV address</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -3174,8 +3174,8 @@
         <translation>Unable to start HTTP server. See debug log for details.</translation>
     </message>
     <message>
-        <source>VIPSTARCOIN Core</source>
-        <translation>VIPSTARCOIN Core</translation>
+        <source>VIPSTARCOIN-MV Core</source>
+        <translation>VIPSTARCOIN-MV Core</translation>
     </message>
     <message>
         <source>The %s developers</source>

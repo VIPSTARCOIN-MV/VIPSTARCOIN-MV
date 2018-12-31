@@ -1,10 +1,10 @@
 *.tar.gz
 
 *.exe
-src/vipstarcoin
-src/vipstarcoind
-src/vipstarcoin-cli
-src/vipstarcoin-tx
+src/vipstarcoin-mv
+src/vipstarcoin-mvd
+src/vipstarcoin-mv-cli
+src/vipstarcoin-mv-tx
 src/test/test_bitcoin
 src/test/test_bitcoin_fuzzy
 src/qt/test/test_bitcoin-qt
@@ -80,8 +80,8 @@ src/qt/bitcoin-qt.includes
 # Compilation and Qt preprocessor part
 *.qm
 Makefile
-vipstarcoin-qt
-VIPSTARCOIN-Qt.app
+vipstarcoin-mv-qt
+VIPSTARCOIN-MV-Qt.app
 
 # Unit-tests
 Makefile.test
@@ -118,12 +118,12 @@ contrib/devtools/split-debug.sh
 .cproject
 .project
 .settings/language.settings.xml
-src/vipstarcoin-cli
-src/vipstarcoin-tx
-src/vipstarcoind
-src/bench/bench_vipstarcoin
-src/qt/vipstarcoin-qt
-src/qt/test/test_vipstarcoin-qt
+src/vipstarcoin-mv-cli
+src/vipstarcoin-mv-tx
+src/vipstarcoin-mvd
+src/bench/bench_vipstarcoin-mv
+src/qt/vipstarcoin-mv-qt
+src/qt/test/test_vipstarcoin-mv-qt
 src/test/buildenv.py
-src/test/test_vipstarcoin
-src/test/test_vipstarcoin_fuzzy
+src/test/test_vipstarcoin-mv
+src/test/test_vipstarcoin-mv_fuzzy

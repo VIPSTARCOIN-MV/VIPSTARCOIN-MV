@@ -16,14 +16,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "VIPSTARCOIN"
-            VALUE "FileDescription",    "vipstarcoind (VIPSTARCOIN node with a JSON-RPC server)"
+            VALUE "CompanyName",        "VIPSTARCOIN-MV"
+            VALUE "FileDescription",    "vipstarcoin-mvd (VIPSTARCOIN-MV node with a JSON-RPC server)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "vipstarcoind"
+            VALUE "InternalName",       "vipstarcoin-mvd"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "vipstarcoind.exe"
-            VALUE "ProductName",        "vipstarcoind"
+            VALUE "OriginalFilename",   "vipstarcoin-mvd.exe"
+            VALUE "ProductName",        "vipstarcoin-mvd"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

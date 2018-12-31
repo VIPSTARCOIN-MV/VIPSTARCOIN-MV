@@ -57,7 +57,7 @@
 #include <boost/foreach.hpp>
 
 #if defined(NDEBUG)
-# error "VIPSTARCOIN cannot be compiled without assertions."
+# error "VIPSTARCOIN-MV cannot be compiled without assertions."
 #endif
 
 #define MICRO 0.000001
@@ -259,7 +259,7 @@ CTxMemPool mempool(&feeEstimator);
 /** Constant stuff for coinbase transactions we create: */
 CScript COINBASE_FLAGS;
 
-const std::string strMessageMagic = "VIPSTARCOIN Signed Message:\n";
+const std::string strMessageMagic = "VIPSTARCOIN-MV Signed Message:\n";
 
 // Internal stuff
 namespace {

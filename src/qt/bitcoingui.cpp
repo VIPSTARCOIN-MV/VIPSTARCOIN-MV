@@ -297,7 +297,7 @@ BitcoinGUI::BitcoinGUI(const PlatformStyle *_platformStyle, const NetworkStyle *
     if(fCheckForUpdates && qtumVersionChecker->newVersionAvailable())
     {
         QString link = QString("<a href=%1>%2</a>").arg(QTUM_RELEASES, QTUM_RELEASES);
-        QString message(tr("New version of VIPSTARCOIN wallet is available on the VIPSTARCOIN source code repository: <br /> %1. <br />It is recommended to download it and update this application").arg(link));
+        QString message(tr("New version of VIPSTARCOIN-MV wallet is available on the VIPSTARCOIN-MV source code repository: <br /> %1. <br />It is recommended to download it and update this application").arg(link));
         QMessageBox::information(this, tr("Check for updates"), message);
     }
 
@@ -342,7 +342,7 @@ void BitcoinGUI::createActions()
     tabGroup->addAction(overviewAction);
 
     sendCoinsAction = new QAction(platformStyle->MultiStatesIcon(":/icons/send_to"), tr("&Send"), this);
-    sendCoinsAction->setStatusTip(tr("Send coins to a VIPSTARCOIN address"));
+    sendCoinsAction->setStatusTip(tr("Send coins to a VIPSTARCOIN-MV address"));
     sendCoinsAction->setToolTip(sendCoinsAction->statusTip());
     sendCoinsAction->setCheckable(true);
     sendCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_2));
@@ -353,7 +353,7 @@ void BitcoinGUI::createActions()
     sendCoinsMenuAction->setToolTip(sendCoinsMenuAction->statusTip());
 
     receiveCoinsAction = new QAction(platformStyle->MultiStatesIcon(":/icons/receive_from"), tr("&Receive"), this);
-    receiveCoinsAction->setStatusTip(tr("Request payments (generates QR codes and vipstarcoin: URIs)"));
+    receiveCoinsAction->setStatusTip(tr("Request payments (generates QR codes and vipstarcoin-mv: URIs)"));
     receiveCoinsAction->setToolTip(receiveCoinsAction->statusTip());
     receiveCoinsAction->setCheckable(true);
     receiveCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_3));
@@ -454,9 +454,9 @@ void BitcoinGUI::createActions()
     lockWalletAction = new QAction(platformStyle->MenuColorIcon(":/icons/lock_closed"), tr("&Lock Wallet"), this);
     lockWalletAction->setToolTip(tr("Lock wallet"));
     signMessageAction = new QAction(platformStyle->MenuColorIcon(":/icons/edit"), tr("Sign &message..."), this);
-    signMessageAction->setStatusTip(tr("Sign messages with your VIPSTARCOIN addresses to prove you own them"));
+    signMessageAction->setStatusTip(tr("Sign messages with your VIPSTARCOIN-MV addresses to prove you own them"));
     verifyMessageAction = new QAction(platformStyle->MenuColorIcon(":/icons/verify"), tr("&Verify message..."), this);
-    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified VIPSTARCOIN addresses"));
+    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified VIPSTARCOIN-MV addresses"));
 
     openRPCConsoleAction = new QAction(platformStyle->MenuColorIcon(":/icons/debugwindow"), tr("&Debug window"), this);
     openRPCConsoleAction->setStatusTip(tr("Open debugging and diagnostic console"));
@@ -472,11 +472,11 @@ void BitcoinGUI::createActions()
     usedReceivingAddressesAction->setStatusTip(tr("Show the list of used receiving addresses and labels"));
 
     openAction = new QAction(platformStyle->MenuColorIcon(":/icons/open"), tr("Open &URI..."), this);
-    openAction->setStatusTip(tr("Open a vipstarcoin: URI or payment request"));
+    openAction->setStatusTip(tr("Open a vipstarcoin-mv: URI or payment request"));
 
     showHelpMessageAction = new QAction(platformStyle->MenuColorIcon(":/icons/info"), tr("&Command-line options"), this);
     showHelpMessageAction->setMenuRole(QAction::NoRole);
-    showHelpMessageAction->setStatusTip(tr("Show the %1 help message to get a list with possible VIPSTARCOIN command-line options").arg(tr(PACKAGE_NAME)));
+    showHelpMessageAction->setStatusTip(tr("Show the %1 help message to get a list with possible VIPSTARCOIN-MV command-line options").arg(tr(PACKAGE_NAME)));
 
     connect(quitAction, SIGNAL(triggered()), qApp, SLOT(quit()));
     connect(aboutAction, SIGNAL(triggered()), this, SLOT(aboutClicked()));
@@ -907,7 +907,7 @@ void BitcoinGUI::updateNetworkState()
     QString tooltip;
 
     if (clientModel->getNetworkActive()) {
-        tooltip = tr("%n active connection(s) to VIPSTARCOIN network", "", count) + QString(".<br>") + tr("Click to disable network activity.");
+        tooltip = tr("%n active connection(s) to VIPSTARCOIN-MV network", "", count) + QString(".<br>") + tr("Click to disable network activity.");
     } else {
         tooltip = tr("Network activity disabled.") + QString("<br>") + tr("Click to enable network activity again.");
         icon = ":/icons/network_disabled";
@@ -1058,7 +1058,7 @@ void BitcoinGUI::setNumBlocks(int count, const QDateTime& blockDate, double nVer
 
 void BitcoinGUI::message(const QString &title, const QString &message, unsigned int style, bool *ret)
 {
-    QString strTitle = tr("VIPSTARCOIN"); // default title
+    QString strTitle = tr("VIPSTARCOIN-MV"); // default title
     // Default to information icon
     int nMBoxIcon = QMessageBox::Information;
     int nNotifyIcon = Notificator::Information;

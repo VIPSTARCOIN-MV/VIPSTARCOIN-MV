@@ -82,8 +82,8 @@
 // Application startup time (used for uptime calculation)
 const int64_t nStartupTime = GetTime();
 
-const char * const BITCOIN_CONF_FILENAME = "VIPSTARCOIN.conf";
-const char * const BITCOIN_PID_FILENAME = "VIPSTARCOINd.pid";
+const char * const BITCOIN_CONF_FILENAME = "VIPSTARCOIN-MV.conf";
+const char * const BITCOIN_PID_FILENAME = "VIPSTARCOIN-MVd.pid";
 const char * const DEFAULT_DEBUGLOGFILE = "debug.log";
 const char * const DEFAULT_DEBUGVMLOGFILE = "vm.log";
 
@@ -615,13 +615,13 @@ void PrintExceptionContinue(const std::exception* pex, const char* pszThread)
 
 fs::path GetDefaultDataDir()
 {
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\VIPSTARCOIN
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\VIPSTARCOIN
-    // Mac: ~/Library/Application Support/VIPSTARCOIN
-    // Unix: ~/.VIPSTARCOIN
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\VIPSTARCOIN-MV
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\VIPSTARCOIN-MV
+    // Mac: ~/Library/Application Support/VIPSTARCOIN-MV
+    // Unix: ~/.VIPSTARCOIN-MV
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "VIPSTARCOIN";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "VIPSTARCOIN-MV";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -631,10 +631,10 @@ fs::path GetDefaultDataDir()
         pathRet = fs::path(pszHome);
 #ifdef MAC_OSX
     // Mac
-    return pathRet / "Library/Application Support/VIPSTARCOIN";
+    return pathRet / "Library/Application Support/VIPSTARCOIN-MV";
 #else
     // Unix
-    return pathRet / ".VIPSTARCOIN";
+    return pathRet / ".VIPSTARCOIN-MV";
 #endif
 #endif
 }
