@@ -620,16 +620,16 @@ nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
 # bitcoind binary #
-vipstarcoin-mvd_SOURCES = bitcoind.cpp
-vipstarcoin-mvd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-vipstarcoin-mvd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-vipstarcoin-mvd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+vipstarcoin_mvd_SOURCES = bitcoind.cpp
+vipstarcoin_mvd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+vipstarcoin_mvd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+vipstarcoin_mvd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-vipstarcoin-mvd_SOURCES += bitcoind-res.rc
+vipstarcoin_mvd_SOURCES += bitcoind-res.rc
 endif
 
-vipstarcoin-mvd_LDADD = \
+vipstarcoin_mvd_LDADD = \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_COMMON) \
   $(LIBUNIVALUE) \
@@ -644,19 +644,19 @@ vipstarcoin-mvd_LDADD = \
   $(LIBCRYPTOPP) \
   $(LIBSECP256K1)
 
-vipstarcoin-mvd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
+vipstarcoin_mvd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
 
 # bitcoin-cli binary #
-vipstarcoin-mv_cli_SOURCES = bitcoin-cli.cpp
-vipstarcoin-mv_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-vipstarcoin-mv_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-vipstarcoin-mv_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+vipstarcoin_mv_cli_SOURCES = bitcoin-cli.cpp
+vipstarcoin_mv_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+vipstarcoin_mv_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+vipstarcoin_mv_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-vipstarcoin-mv_cli_SOURCES += bitcoin-cli-res.rc
+vipstarcoin_mv_cli_SOURCES += bitcoin-cli-res.rc
 endif
 
-vipstarcoin-mv_cli_LDADD = \
+vipstarcoin_mv_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_UTIL) \
@@ -667,20 +667,20 @@ vipstarcoin-mv_cli_LDADD = \
   $(LIBCRYPTOPP) \
   $(LIBSECP256K1)
 
-vipstarcoin-mv_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
+vipstarcoin_mv_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
 # bitcoin-tx binary #
-vipstarcoin-mv_tx_SOURCES = bitcoin-tx.cpp consensus/consensus.cpp
-vipstarcoin-mv_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-vipstarcoin-mv_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-vipstarcoin-mv_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+vipstarcoin_mv_tx_SOURCES = bitcoin-tx.cpp consensus/consensus.cpp
+vipstarcoin_mv_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+vipstarcoin_mv_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+vipstarcoin_mv_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-vipstarcoin-mv_tx_SOURCES += bitcoin-tx-res.rc
+vipstarcoin_mv_tx_SOURCES += bitcoin-tx-res.rc
 endif
 
-vipstarcoin-mv_tx_LDADD = \
+vipstarcoin_mv_tx_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UTIL) \
@@ -692,7 +692,7 @@ vipstarcoin-mv_tx_LDADD = \
   $(LIBCRYPTOPP) \
   $(LIBSECP256K1)
 
-vipstarcoin-mv_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
+vipstarcoin_mv_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 #
 
 # bitcoinconsensus library #
