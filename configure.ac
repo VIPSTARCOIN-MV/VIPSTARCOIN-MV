@@ -238,6 +238,8 @@ if test "x$enable_debug" = xyes; then
     fi
 fi
 
+CFLAGS="$CFLAGS -fPIC"
+
 CPPFLAGS="$CPPFLAGS -DQTUM_BUILD"
 
 ERROR_CXXFLAGS=
