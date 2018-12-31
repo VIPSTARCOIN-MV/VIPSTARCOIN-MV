@@ -992,6 +992,14 @@ std::string CopyrightHolders(const std::string& strPrefix)
         strCopyrightHolders += "\n" + strYear + "The Bitcoin Core developers";
 
         strYear = strPrefix;
+        strYear.replace(strYear.find("2018"), sizeof("2018")-1, "2011");
+        strCopyrightHolders += "\n" + strYear + "The Litecoin Core developers";
+
+        strYear = strPrefix;
+        strYear.replace(strYear.find("2018"), sizeof("2018")-1, "2013");
+        strCopyrightHolders += "\n" + strYear + "The Vertcoin Core developers";
+
+        strYear = strPrefix;
         strYear.replace(strYear.find("2018"), sizeof("2018")-1, "2014");
         strCopyrightHolders += "\n" + strYear + "The Monacoin Core developers";
 
@@ -1002,6 +1010,14 @@ std::string CopyrightHolders(const std::string& strPrefix)
         strYear = strPrefix;
         strYear.replace(strYear.find("2018"), sizeof("2018")-1, "2016");
         strCopyrightHolders += "\n" + strYear + "The Qtum Core developers";
+
+        strYear = strPrefix;
+        strYear.replace(strYear.find("2018"), sizeof("2018")-1, "2017");
+        strCopyrightHolders += "\n" + strYear + "The Bitcoin Gold Core developers";
+
+        strYear = strPrefix;
+        strYear.replace(strYear.find("2018"), sizeof("2018")-1, "2018");
+        strCopyrightHolders += "\n" + strYear + "The VIPSTARCOIN Core developers";
     }
     return strCopyrightHolders;
 }
