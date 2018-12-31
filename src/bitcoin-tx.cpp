@@ -54,10 +54,10 @@ static int AppInitRawTx(int argc, char* argv[])
     if (argc<2 || gArgs.IsArgSet("-?") || gArgs.IsArgSet("-h") || gArgs.IsArgSet("-help"))
     {
         // First part of help message is specific to this utility
-        std::string strUsage = strprintf(_("%s vipstarcoin-tx utility version"), _(PACKAGE_NAME)) + " " + FormatFullVersion() + "\n\n" +
+        std::string strUsage = strprintf(_("%s vipstarcoin-mv-tx utility version"), _(PACKAGE_NAME)) + " " + FormatFullVersion() + "\n\n" +
             _("Usage:") + "\n" +
-              "  vipstarcoin-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded vipstarcoin transaction") + "\n" +
-              "  vipstarcoin-tx [options] -create [commands]   " + _("Create hex-encoded vipstarcoin transaction") + "\n" +
+              "  vipstarcoin-mv-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded vipstarcoin-mv transaction") + "\n" +
+              "  vipstarcoin-mv-tx [options] -create [commands]   " + _("Create hex-encoded vipstarcoin-mv transaction") + "\n" +
               "\n";
 
         fprintf(stdout, "%s", strUsage.c_str());
@@ -498,7 +498,7 @@ static void MutateTxDelOutput(CMutableTransaction& tx, const std::string& strOut
     tx.vout.erase(tx.vout.begin() + outIdx);
 }
 
-static const unsigned int N_SIGHASH_OPTS = 6;
+static const unsigned int N_SIGHASH_OPTS = 12;
 static const struct {
     const char *flagStr;
     int flags;
@@ -509,6 +509,12 @@ static const struct {
     {"ALL|ANYONECANPAY", SIGHASH_ALL|SIGHASH_ANYONECANPAY},
     {"NONE|ANYONECANPAY", SIGHASH_NONE|SIGHASH_ANYONECANPAY},
     {"SINGLE|ANYONECANPAY", SIGHASH_SINGLE|SIGHASH_ANYONECANPAY},
+    {"ALL|FORKID", SIGHASH_ALL|SIGHASH_FORKID},
+    {"NONE|FORKID", SIGHASH_NONE|SIGHASH_FORKID},
+    {"SINGLE|FORKID", SIGHASH_SINGLE|SIGHASH_FORKID},
+    {"ALL|FORKID|ANYONECANPAY", SIGHASH_ALL|SIGHASH_FORKID|SIGHASH_ANYONECANPAY},
+    {"NONE|FORKID|ANYONECANPAY", SIGHASH_NONE|SIGHASH_FORKID|SIGHASH_ANYONECANPAY},
+    {"SINGLE|FORKID|ANYONECANPAY", SIGHASH_SINGLE|SIGHASH_FORKID|SIGHASH_ANYONECANPAY},
 };
 
 static bool findSighashFlags(int& flags, const std::string& flagStr)
@@ -539,7 +545,7 @@ static CAmount AmountFromValue(const UniValue& value)
 
 static void MutateTxSign(CMutableTransaction& tx, const std::string& flagStr)
 {
-    int nHashType = SIGHASH_ALL;
+    int nHashType = SIGHASH_ALL | SIGHASH_FORKID;
 
     if (flagStr.size() > 0)
         if (!findSighashFlags(nHashType, flagStr))
@@ -632,7 +638,7 @@ static void MutateTxSign(CMutableTransaction& tx, const std::string& flagStr)
 
     const CKeyStore& keystore = tempKeystore;
 
-    bool fHashSingle = ((nHashType & ~SIGHASH_ANYONECANPAY) == SIGHASH_SINGLE);
+    bool fHashSingle = ((nHashType & ~(SIGHASH_ANYONECANPAY | SIGHASH_FORKID)) == SIGHASH_SINGLE);
 
     // Sign what we can:
     for (unsigned int i = 0; i < mergedTx.vin.size(); i++) {

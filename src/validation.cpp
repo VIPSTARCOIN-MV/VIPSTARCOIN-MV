@@ -57,7 +57,7 @@
 #include <boost/foreach.hpp>
 
 #if defined(NDEBUG)
-# error "VIPSTARCOIN cannot be compiled without assertions."
+# error "VIPSTARCOIN-MV cannot be compiled without assertions."
 #endif
 
 #define MICRO 0.000001
@@ -259,7 +259,7 @@ CTxMemPool mempool(&feeEstimator);
 /** Constant stuff for coinbase transactions we create: */
 CScript COINBASE_FLAGS;
 
-const std::string strMessageMagic = "VIPSTARCOIN Signed Message:\n";
+const std::string strMessageMagic = "VIPSTARCOIN-MV Signed Message:\n";
 
 // Internal stuff
 namespace {
@@ -480,6 +480,23 @@ static bool IsCurrentForFeeEstimation()
     if (chainActive.Height() < pindexBestHeader->nHeight - 1)
         return false;
     return true;
+}
+
+bool static IsVIPSHardForkEnabled(int nHeight, const Consensus::Params& params) {
+    return nHeight >= Params().SwitchLyra2REv3block();
+}
+
+bool IsVIPSHardForkEnabled(const CBlockIndex* pindexPrev, const Consensus::Params& params) {
+    if (pindexPrev == nullptr) {
+        return false;
+    }
+
+    return IsVIPSHardForkEnabled(pindexPrev->nHeight, params);
+}
+
+bool IsVIPSHardForkEnabledForCurrentBlock(const Consensus::Params& params) {
+    AssertLockHeld(cs_main);
+    return IsVIPSHardForkEnabled(chainActive.Tip(), params);
 }
 
 /* Make mempool consistent after a reorg, by re-adding or recursively erasing
@@ -804,11 +821,6 @@ static bool AcceptToMemoryPoolWorker(const CChainParams& chainparams, CTxMemPool
 
             if(count > qtumTransactions.size())
                 return state.DoS(100, false, REJECT_INVALID, "bad-txns-incorrect-format");
-
-            if (rawTx && nAbsurdFee && dev::u256(nFees) > dev::u256(nAbsurdFee) + sumGas)
-                return state.Invalid(false,
-                    REJECT_HIGHFEE, "absurdly-high-fee",
-                    strprintf("%d > %d", nFees, nAbsurdFee));
         }
         ////////////////////////////////////////////////////////////
 
@@ -1201,10 +1213,10 @@ bool GetTransaction(const uint256& hash, CTransactionRef& txOut, const Consensus
     return false;
 }
 
-bool CheckHeaderPoW(const CBlockHeader& block, const Consensus::Params& consensusParams)
+bool CheckHeaderPoW(const CBlockHeader& block, int nHeight, const Consensus::Params& consensusParams)
 {
     // Check for proof of work block header
-    return CheckProofOfWork(block.GetPoWHash(), block.nBits, consensusParams);
+    return CheckProofOfWork(block.GetPoWHash(nHeight >= Params().SwitchLyra2REv3block()), block.nBits, consensusParams);
 }
 
 bool CheckHeaderPoS(const CBlockHeader& block, const Consensus::Params& consensusParams)
@@ -1220,9 +1232,9 @@ bool CheckHeaderPoS(const CBlockHeader& block, const Consensus::Params& consensu
     return CheckKernel(pindexPrev, block.nBits, block.StakeTime(), block.prevoutStake, *pcoinsTip);
 }
 
-bool CheckHeaderProof(const CBlockHeader& block, const Consensus::Params& consensusParams){
+bool CheckHeaderProof(const CBlockHeader& block, int nHeight, const Consensus::Params& consensusParams){
     if(block.IsProofOfWork()){
-        return CheckHeaderPoW(block, consensusParams);
+        return CheckHeaderPoW(block, nHeight, consensusParams);
     }
     if(block.IsProofOfStake()){
         return CheckHeaderPoS(block, consensusParams);
@@ -1271,7 +1283,7 @@ static bool WriteBlockToDisk(const CBlock& block, CDiskBlockPos& pos, const CMes
 }
 
 template <typename Block>
-bool ReadBlockFromDisk(Block& block, const CDiskBlockPos& pos, const Consensus::Params& consensusParams)
+bool ReadBlockFromDisk(Block& block, const CDiskBlockPos& pos, int nHeight, const Consensus::Params& consensusParams)
 {
     block.SetNull();
 
@@ -1292,7 +1304,7 @@ bool ReadBlockFromDisk(Block& block, const CDiskBlockPos& pos, const Consensus::
     if(!block.IsProofOfStake()) {
         //PoS blocks can be loaded out of order from disk, which makes PoS impossible to validate. So, do not validate their headers
         //they will be validated later in CheckBlock and ConnectBlock anyway
-        if (!CheckHeaderProof(block, consensusParams))
+        if (!CheckHeaderProof(block, nHeight, consensusParams))
             return error("ReadBlockFromDisk: Errors in block header at %s", pos.ToString());
     }
 
@@ -1307,7 +1319,7 @@ bool ReadBlockFromDisk(CBlock& block, const CBlockIndex* pindex, const Consensus
         blockPos = pindex->GetBlockPos();
     }
 
-    if (!ReadBlockFromDisk(block, blockPos, consensusParams))
+    if (!ReadBlockFromDisk(block, blockPos, pindex->nHeight, consensusParams))
         return false;
     if (block.GetHash() != pindex->GetBlockHash())
         return error("ReadBlockFromDisk(CBlock&, CBlockIndex*): GetHash() doesn't match index for %s at %s",
@@ -1315,9 +1327,9 @@ bool ReadBlockFromDisk(CBlock& block, const CBlockIndex* pindex, const Consensus
     return true;
 }
 
-bool ReadFromDisk(CBlockHeader& block, unsigned int nFile, unsigned int nBlockPos)
+bool ReadFromDisk(CBlockHeader& block, unsigned int nFile, unsigned int nBlockPos, int nHeight)
 {
-    return ReadBlockFromDisk(block, CDiskBlockPos(nFile, nBlockPos), Params().GetConsensus());
+    return ReadBlockFromDisk(block, CDiskBlockPos(nFile, nBlockPos), nHeight, Params().GetConsensus());
 }
 
 //This function for reading transaction can also be used to re-factorize GetTransaction.
@@ -1356,29 +1368,45 @@ bool ReadFromDisk(CMutableTransaction& tx, CDiskTxPos& txindex, CBlockTreeDB& tx
 
 CAmount GetProofOfStakeReward(int nHeight, const Consensus::Params& consensusParams)
 {
-    CAmount nSubsidy = 9500 * COIN;
-    if (nHeight <= 2000)
-        return 1 * COIN;
-    if (nHeight <= 28000)
-        return 3000 * COIN;
-    int halvings = nHeight / consensusParams.nSubsidyHalvingInterval;
-    // Force block reward to zero when right shift is undefined.
-    if (halvings >= 128)
-        return 0;
-    nSubsidy >>= halvings;
-    if (nSubsidy < 100 * COIN)
-        return 100 * COIN;
-    return nSubsidy;
+	if (nHeight < Params().SwitchLyra2REv3block())
+	{
+    	CAmount nSubsidy = 9500 * COIN;
+    	if (nHeight <= 2000)
+        	return 1 * COIN;
+    	if (nHeight <= 28000)
+        	return 3000 * COIN;
+    	int halvings = nHeight / consensusParams.nSubsidyHalvingInterval;
+    	// Force block reward to zero when right shift is undefined.
+    	if (halvings >= 128)
+        	return 0;
+    	nSubsidy >>= halvings;
+    	if (nSubsidy < 100 * COIN)
+        	return 100 * COIN;
+    	return nSubsidy;
+    }
+    else
+    {
+    	CAmount nSubsidy = 1919 * COIN;
+    	return nSubsidy;
+    }
 }
 
 CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
 {
-    CAmount nSubsidy = 100 * COIN;
-    if (nHeight == 1 || nHeight == 100 || nHeight == 200 || nHeight == 300 || nHeight == 400 || nHeight == 500)
-        return 10000000000 * COIN;
-    if (nHeight <= 2000)
-        return 1 * COIN;
-    return nSubsidy;
+	if (nHeight < Params().SwitchLyra2REv3block())
+	{
+    	CAmount nSubsidy = 100 * COIN;
+	    if (nHeight == 1 || nHeight == 100 || nHeight == 200 || nHeight == 300 || nHeight == 400 || nHeight == 500)
+    	    return 10000000000 * COIN;
+    	if (nHeight <= 2000)
+        	return 1 * COIN;
+    	return nSubsidy;
+    }
+    else
+    {
+    	CAmount nSubsidy = 4545 * COIN;
+    	return nSubsidy;
+    }
 }
 
 bool IsInitialBlockDownload()
@@ -1984,6 +2012,12 @@ static unsigned int GetBlockScriptFlags(const CBlockIndex* pindex, const Consens
     if (IsWitnessEnabled(pindex->pprev, consensusparams)) {
         flags |= SCRIPT_VERIFY_WITNESS;
         flags |= SCRIPT_VERIFY_NULLDUMMY;
+    }
+
+    if (IsVIPSHardForkEnabled(pindex->pprev, consensusparams)) {
+        flags |= SCRIPT_VERIFY_STRICTENC;
+    } else {
+        flags |= SCRIPT_ALLOW_NON_FORKID;
     }
 
     return flags;
@@ -3310,7 +3344,6 @@ bool CChainState::ConnectTip(CValidationState& state, const CChainParams& chainp
 
             globalState->setRoot(oldHashStateRoot); // qtum
             globalState->setRootUTXO(oldHashUTXORoot); // qtum
-            pstorageresult->clearCacheResult();
             return error("ConnectTip(): %s block %s failed", blockConnecting.IsProofOfStake() ? "PoS" : "PoW", pindexNew->GetBlockHash().ToString());
         }
         nTime3 = GetTimeMicros(); nTimeConnectTotal += nTime3 - nTime2;
@@ -4045,8 +4078,17 @@ bool CheckBlockSignature(const CBlock& block)
 
 static bool CheckBlockHeader(const CBlockHeader& block, CValidationState& state, const Consensus::Params& consensusParams, bool fCheckPOW = true, bool fCheckPOS = true)
 {
+	// Get prev block index
+    CBlockIndex* pindexPrev = NULL;
+    int nHeight = 0;
+    BlockMap::iterator mi = mapBlockIndex.find(block.hashPrevBlock);
+    if (mi != mapBlockIndex.end()) {
+        pindexPrev = (*mi).second;
+        nHeight = pindexPrev->nHeight + 1;
+    }
+
     // Check proof of work matches claimed amount
-    if (fCheckPOW && block.IsProofOfWork() && !CheckHeaderPoW(block, consensusParams))
+    if (fCheckPOW && block.IsProofOfWork() && !CheckHeaderPoW(block, nHeight, consensusParams))
         return state.DoS(50, false, REJECT_INVALID, "high-hash", false, "proof of work failed");
 
 //    // Check proof of stake matches claimed amount
@@ -4778,7 +4820,6 @@ bool TestBlockValidity(CValidationState& state, const CChainParams& chainparams,
         
         globalState->setRoot(oldHashStateRoot); // qtum
         globalState->setRootUTXO(oldHashUTXORoot); // qtum
-        pstorageresult->clearCacheResult();
         return false;
     }
     assert(state.IsValid());
@@ -5269,7 +5310,6 @@ bool CVerifyDB::VerifyDB(const CChainParams& chainparams, CCoinsView *coinsview,
 
                 globalState->setRoot(oldHashStateRoot); // qtum
                 globalState->setRootUTXO(oldHashUTXORoot); // qtum
-                pstorageresult->clearCacheResult();
                 return error("VerifyDB(): *** found unconnectable block at %d, hash=%s", pindex->nHeight, pindex->GetBlockHash().ToString());
             }
         }
@@ -5665,7 +5705,9 @@ bool LoadExternalBlockFile(const CChainParams& chainparams, FILE* fileIn, CDiskB
                     while (range.first != range.second) {
                         std::multimap<uint256, CDiskBlockPos>::iterator it = range.first;
                         std::shared_ptr<CBlock> pblockrecursive = std::make_shared<CBlock>();
-                        if (ReadBlockFromDisk(*pblockrecursive, it->second, chainparams.GetConsensus()))
+                        uint256 hash = block.GetHash();
+                        int nHeight = mapBlockIndex[hash]->nHeight;
+                        if (ReadBlockFromDisk(*pblockrecursive, it->second, nHeight, chainparams.GetConsensus()))
                         {
                             LogPrint(BCLog::REINDEX, "%s: Processing out of order child %s of %s\n", __func__, pblockrecursive->GetHash().ToString(),
                                     head.ToString());

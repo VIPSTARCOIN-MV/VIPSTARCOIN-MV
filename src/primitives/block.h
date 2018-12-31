@@ -9,6 +9,7 @@
 #include <primitives/transaction.h>
 #include <serialize.h>
 #include <uint256.h>
+#include <crypto/Lyra2RE/Lyra2RE.h>
 
 static const int SER_WITHOUT_SIGNATURE = 1 << 3;
 
@@ -78,7 +79,7 @@ public:
 
     uint256 GetHash() const;
 
-	unit256 GetPoWHash() const;
+	uint256 GetPoWHash(bool bLyra2REv3 = false) const;
 
     uint256 GetHashWithoutSign() const;
 

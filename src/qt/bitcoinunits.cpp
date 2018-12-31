@@ -40,9 +40,9 @@ QString BitcoinUnits::longName(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("VIPS");
-    case mBTC: return QString("mVIPS");
-    case uBTC: return QString::fromUtf8("µVIPS (bits)");
+    case BTC: return QString("VMV");
+    case mBTC: return QString("mVMV");
+    case uBTC: return QString::fromUtf8("µVMV");
     default: return QString("???");
     }
 }
@@ -60,9 +60,9 @@ QString BitcoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("VIPSTARCOIN");
-    case mBTC: return QString("Milli-VIPSTARCOINs (1 / 1" THIN_SP_UTF8 "000)");
-    case uBTC: return QString("Micro-VIPSTARCOINs (bits) (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case BTC: return QString("VIPSTARCOIN-MV");
+    case mBTC: return QString("Milli-VIPSTARCOIN-MVs (1 / 1" THIN_SP_UTF8 "000)");
+    case uBTC: return QString("Micro-VIPSTARCOIN-MVs (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     default: return QString("???");
     }
 }

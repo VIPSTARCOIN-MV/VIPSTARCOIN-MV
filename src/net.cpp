@@ -1507,7 +1507,7 @@ void ThreadMapPort()
             }
         }
 
-        std::string strDesc = "VIPSTARCOIN " + FormatFullVersion();
+        std::string strDesc = "VIPSTARCOIN-MV " + FormatFullVersion();
 
         try {
             while (true) {

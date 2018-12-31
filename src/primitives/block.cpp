@@ -9,14 +9,20 @@
 #include <tinyformat.h>
 #include <utilstrencodings.h>
 #include <crypto/common.h>
+#include <chainparams.h>
 
 uint256 CBlockHeader::GetHash() const
 {
     return SerializeHash(*this);
 }
 
-unit256 CBlockHeader::GetPoWHash() const
+uint256 CBlockHeader::GetPoWHash(bool bLyra2REv3) const
 {
+	if(bLyra2REv3){
+		uint256 thash;
+		lyra2re3_hash(BEGIN(nVersion), BEGIN(thash));
+		return thash;
+	}
 	return GetHash();
 }
 

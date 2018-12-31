@@ -541,8 +541,8 @@ std::string HelpMessage(HelpMessageMode mode)
 
 std::string LicenseInfo()
 {
-    const std::string URL_SOURCE_CODE = "<https://github.com/vipstar-dev/VIPSTARCOIN>";
-    const std::string URL_WEBSITE = "<https://www.vipstarcoin.jp/>";
+    const std::string URL_SOURCE_CODE = "<https://github.com/VIPSTARCOIN-MV/VIPSTARCOIN-MV>";
+    const std::string URL_WEBSITE = "https://github.com/VIPSTARCOIN-MV>";
 
     return CopyrightHolders(strprintf(_("Copyright (C) %i-%i"), 2018, COPYRIGHT_YEAR) + " ") + "\n" +
            "\n" +
@@ -1643,7 +1643,7 @@ bool AppInitMain()
                 }
 
                 dev::eth::Ethash::init();
-                fs::path qtumStateDir = GetDataDir() / "stateVIPSTARCOIN";
+                fs::path qtumStateDir = GetDataDir() / "stateVIPSTARCOIN-MV";
                 bool fStatus = fs::exists(qtumStateDir);
                 const std::string dirQtum(qtumStateDir.string());
                 const dev::h256 hashDB(dev::sha3(dev::rlp("")));

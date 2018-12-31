@@ -36,7 +36,7 @@
 #include <consensus/merkle.h>
 
 #if defined(NDEBUG)
-# error "VIPSTARCOIN cannot be compiled without assertions."
+# error "VIPSTARCOIN-MV cannot be compiled without assertions."
 #endif
 
 std::atomic<int64_t> nTimeBestReceived(0); // Used only to inform the wallet of when we last received a block
@@ -1677,6 +1677,7 @@ bool static ProcessMessage(CNode* pfrom, const std::string& strCommand, CDataStr
         uint64_t nServiceInt;
         ServiceFlags nServices;
         int nVersion;
+        int nHeight;
         int nSendVersion;
         std::string strSubVer;
         std::string cleanSubVer;
@@ -1710,14 +1711,29 @@ bool static ProcessMessage(CNode* pfrom, const std::string& strCommand, CDataStr
             }
         }
 
-        if (nVersion < MIN_PEER_PROTO_VERSION)
+        if (nHeight >= Params().SwitchLyra2REv3block())
         {
-            // disconnect from peers older than this proto version
-            LogPrint(BCLog::NET, "peer=%d using obsolete version %i; disconnecting\n", pfrom->GetId(), nVersion);
-            connman->PushMessage(pfrom, CNetMsgMaker(INIT_PROTO_VERSION).Make(NetMsgType::REJECT, strCommand, REJECT_OBSOLETE,
-                               strprintf("Version must be %d or greater", MIN_PEER_PROTO_VERSION)));
-            pfrom->fDisconnect = true;
-            return false;
+        	if (nVersion < MIN_PEER_PROTO_VERSION)
+        	{
+            	// disconnect from peers older than this proto version (after Lyra2REv3 hard fork)
+            	LogPrint(BCLog::NET, "peer=%d using obsolete version %i; disconnecting\n", pfrom->GetId(), nVersion);
+            	connman->PushMessage(pfrom, CNetMsgMaker(INIT_PROTO_VERSION).Make(NetMsgType::REJECT, strCommand, REJECT_OBSOLETE,
+                	               strprintf("Version must be %d or greater", MIN_PEER_PROTO_VERSION)));
+            	pfrom->fDisconnect = true;
+            	return false;
+        	}
+        } 
+        else
+        {
+        	if (nVersion < MIN_PEER_PROTO_VERSION_BEFORE_HF)
+        	{
+            	// disconnect from peers older than this proto version (before Lyra2REv3 hard fork)
+            	LogPrint(BCLog::NET, "peer=%d using obsolete version %i; disconnecting\n", pfrom->GetId(), nVersion);
+            	connman->PushMessage(pfrom, CNetMsgMaker(INIT_PROTO_VERSION).Make(NetMsgType::REJECT, strCommand, REJECT_OBSOLETE,
+                	               strprintf("Version must be %d or greater", MIN_PEER_PROTO_VERSION_BEFORE_HF)));
+            	pfrom->fDisconnect = true;
+            	return false;
+        	}
         }
 
         if (nVersion == 10300)

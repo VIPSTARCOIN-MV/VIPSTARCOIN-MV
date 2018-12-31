@@ -112,6 +112,9 @@ public:
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0x7a9fc529595c3f60b650e60f81d3ba2c2591e32bd811a056e0f889b544fbaa30"); //1017
 
+        // Hardfork params
+        nSwitchLyra2REv3 = 380840;
+
         /**
          * The message start string is designed to be unlikely to occur in normal data.
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
@@ -136,7 +139,7 @@ public:
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x88, 0xB2, 0x1E};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x88, 0xAD, 0xE4};
 
-        bech32_hrp = "vips";
+        bech32_hrp = "vipsmv";
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
 
@@ -212,6 +215,9 @@ public:
         // By default assume that the signatures in ancestors of this block are valid.
         //consensus.defaultAssumeValid = uint256S("0x00000000000128796ee387cf110ccb9d2f36cffaf7f73079c995377c65ac0dcc"); //1079274
 
+        // Hardfork params
+        nSwitchLyra2REv3 = 10;
+
         pchMessageStart[0] = 0x1a;
         pchMessageStart[1] = 0x2b;
         pchMessageStart[2] = 0x3c;
@@ -235,7 +241,7 @@ public:
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_test, pnSeed6_test + ARRAYLEN(pnSeed6_test));
 
-        bech32_hrp = "ttt";
+        bech32_hrp = "tvipsmv";
 
         fMiningRequiresPeers = true;
         fDefaultConsistencyChecks = false;
@@ -301,6 +307,9 @@ public:
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0x00");
 
+        // Hardfork params
+        nSwitchLyra2REv3 = 10;
+
         pchMessageStart[0] = 0x2a;
         pchMessageStart[1] = 0x3b;
         pchMessageStart[2] = 0x4c;
@@ -341,7 +350,7 @@ public:
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x35, 0x83, 0x94};
 
-        bech32_hrp = "skn";
+        bech32_hrp = "rvipsmv";
     }
 };
 

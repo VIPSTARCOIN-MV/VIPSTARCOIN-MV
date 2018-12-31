@@ -8,7 +8,7 @@
 #include <QRegularExpression>
 #include <QRegularExpressionMatchIterator>
 
-#define paternVersion "VIPSTARCOIN-([0-9]+\\.)?([0-9]+\\.)?([0-9]+)-"
+#define paternVersion "VIPSTARCOIN-MV-([0-9]+\\.)?([0-9]+\\.)?([0-9]+)-"
 
 QtumVersionChecker::QtumVersionChecker(QObject *parent) : QObject(parent)
 {
