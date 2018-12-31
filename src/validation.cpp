@@ -1368,7 +1368,7 @@ bool ReadFromDisk(CMutableTransaction& tx, CDiskTxPos& txindex, CBlockTreeDB& tx
 
 CAmount GetProofOfStakeReward(int nHeight, const Consensus::Params& consensusParams)
 {
-	if (nHeight < Params().SwitchLyra2REv3block())
+    if (nHeight < Params().SwitchLyra2REv3block())
 	{
     	CAmount nSubsidy = 9500 * COIN;
     	if (nHeight <= 2000)
@@ -1386,7 +1386,14 @@ CAmount GetProofOfStakeReward(int nHeight, const Consensus::Params& consensusPar
     }
     else
     {
+    	 //Subsidy is cut in half every 3,153,600 blocks which will occur approximately every 6 years. 
+	 int halvings = nHeight / consensusParams.nSubsidyHalvingInterval * 6;
+   	 // Force block reward to zero when right shift is undefined.
+   	 if (halvings >= 64)
+    		return 0;
+
     	CAmount nSubsidy = 1919 * COIN;
+    	nSubsidy >>= halvings;
     	return nSubsidy;
     }
 }
@@ -1404,7 +1411,14 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
     }
     else
     {
+    	 //Subsidy is cut in half every 1,576,800 blocks which will occur approximately every 3 years. 
+	 int halvings = nHeight / consensusParams.nSubsidyHalvingInterval * 3;
+   	 // Force block reward to zero when right shift is undefined.
+   	 if (halvings >= 64)
+    		return 0;
+
     	CAmount nSubsidy = 4545 * COIN;
+    	nSubsidy >>= halvings;
     	return nSubsidy;
     }
 }
