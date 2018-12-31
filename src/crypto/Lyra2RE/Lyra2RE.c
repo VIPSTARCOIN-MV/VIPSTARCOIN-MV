@@ -118,7 +118,7 @@ void lyra2re3_hash(const char* input, char* output)
 	uint32_t hashA[8], hashB[8];
 
 	sph_blake256_init(&ctx_blake);
-    sph_blake256(&ctx_blake, input, 112);
+    sph_blake256(&ctx_blake, input, 144);
     sph_blake256_close (&ctx_blake, hashA);	
 
     LYRA2_3(hashB, 32, hashA, 32, hashA, 32, 1, 4, 4);
